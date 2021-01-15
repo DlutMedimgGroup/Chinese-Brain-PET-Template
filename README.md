@@ -2,11 +2,13 @@
 
 English | [简体中文](./README.zh_CN.md)
 
-This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by Medical Imaging Research Group, Dalian University of Technology  ([GitHub@DlutMedimgGroup](https://github.com/DlutMedimgGroup), [Homepage](https://biomedimg-dlut-edu.cn/)) based on 119 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. Due to the size limitation of GitHub, the dataset is stored on XXX and are free download.
+This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by [Medical Imaging Research Group](https://biomedimg-dlut-edu.cn/), Dalian University of Technology based on 119 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. The dataset is stored on NITRC ([Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/)) and are free download.
+
+[![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB | Python-blue)](https://github.com/DlutMedimgGroup)
 
 ## Install
 
-The project relies on MATLAB, [SPM](https://www.fil.ion.ucl.ac.uk/spm/), [SnPM](http://www.nisox.org/Software/SnPM13/), [Tools for NIfTI and ANALYZE image](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image), Python3, [ANTsPy](https://github.com/ANTsX/ANTsPy) , and other tools and has been tested on the following environments.
+The project relies on MATLAB, [SPM](https://www.fil.ion.ucl.ac.uk/spm/), [SnPM](http://www.nisox.org/Software/SnPM13/), [Tools for NIfTI and ANALYZE image](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image), Python3, [ANTsPy](https://github.com/ANTsX/ANTsPy) , and other tools and has been fully tested on the following environments.
 
 > **Windows 10**
 >
@@ -33,28 +35,28 @@ git clone https://github.com/DlutMedimgGroup/Chinese-Brain-PET-Template.git
 
 ## Usage
 
-<img src="README.assets/image-20210112161506035.png" alt="image-20210112161506035" style="zoom:50%;" />
+<img src="./Pipeline.jpg" alt="image-20210112144350294" height=600 />
 
 ### Building template
 
-Use the ```ants_reg.py``` in the [Python](. /Python Scripts) program folder to registrate all images, this step needs to be done under Linux or MacOS as the SyN method in ANTsPy is used.
+Use the ```ants_reg.py``` in the Python Scripts folder to normalize all images, this step needs to be done under Linux or MacOS as the SyN method in ANTsPy is used.
 
-A mean image and a mask image are generated using the SPM Maskng toolbox. The mask image needs to be manually morphologically adjusted and all the original images are registrated to this mean image again.
+A mean image and a mask image are generated using the SPM Masking toolbox. The mask image needs to be manually morphologically adjusted and all the original images are normalized to this mean image again.
 
 The registration results are intensity normalized by ``normalisaton2mean.py`` and SSD analysis ``distance_analysis.py`` is performed to exclude data with potential metabolic abnormalities.
 
-The mean image is built as a template based on the filtered data, while the standard deviation image ``create_template.py`` is obtained, and mask image is kept unchanged.
+The mean image is built as a template based on the filtered data, while the standard deviation image is obtained by ``create_template.py``, and mask image can be kept unchanged.
 
 ### Applying template to inputted image
 
-A one-step MATLAB script is provided for user-friendly SPM analysis. This script needs MATLAB environment (SPM ，SnPM，Tools for NIfTI and ANALYZE image). When running, you need to modify the ``main.m`` in the [MATLAB](. /MATLAB Scripts) folder, set the data storage path, then it can be executed, and no other NIFTI format data should be stored under the path.
+A MATLAB script is provided for user-friendly SPM analysis. This script needs MATLAB environment (SPM ，SnPM，Tools for NIfTI and ANALYZE image). When running, you need to modify the ``main.m`` in the MATLAB folder, set the image path, and no other NIFTI format data should be stored under the path.
 
 ## Citation
 
-Our work was published on XX. If our work helps, please cite:
+If our work helps, please cite:
 
 ```
-cite
+coming...
 ```
 
 ## License

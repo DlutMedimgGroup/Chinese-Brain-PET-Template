@@ -2,9 +2,9 @@
 
 [English](./README.md) | 简体中文
 
-这个仓库提供了中国人种专属的PET脑模板，还包括了模板的构建与使用的程序。本项目由 [大连理工大学医学影像研究组](https://biomedimg-dlut-edu.cn/) 基于119例正常中国人 <sup>18</sup>F-FDG PET 脑图像完成，并开源了全部数据以及程序。由于 GitHub 体积限制，数据集部分存储在XXX网站上，开放免费下载。
+这个仓库提供了中国人种专属的PET脑模板，还包括了模板的构建与使用的程序。本项目由 [大连理工大学医学影像研究组](https://biomedimg-dlut-edu.cn/) 基于 119 例正常中国人 <sup>18</sup>F-FDG PET 脑图像完成，并开源了全部数据以及程序。数据集部分存储在NITRC上，[Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/) , 开放免费下载。
 
-[![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup)
+[![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB | Python-blue)](https://github.com/DlutMedimgGroup)
 
 ## 安装
 
@@ -35,19 +35,17 @@ git clone https://github.com/DlutMedimgGroup/Chinese-Brain-PET-Template.git
 
 ## 使用说明
 
-<img src="README.zh_CN.assets/image-20210112144350294.png" alt="image-20210112144350294" style="zoom:50%;" />
+<img src="./Pipeline.jpg" alt="image-20210112144350294" height=600 />
 
 ### 模板构建
 
-使用 [Python](./Python Scripts) 程序文件夹下的 ``` ants_reg.py``` 配准所有数据，由于使用到了 ANTsPy 中的 SyN 方法，这一步需要在 Linux 或者 MacOS  下进行。
+使用 Python 程序文件夹下的 ``` ants_reg.py``` 配准所有数据，由于使用到了 ANTsPy 中的 SyN 方法，这一步需要在 Linux 或者 MacOS  下进行。
 
-使用 SPM Maskng toolbox 生成一个平均图像和一个 Mask，Mask 需要手动进行形态学调整，再次将所有原始图像配准到这个平均图像上。
+使用 SPM Masking toolbox 生成一个平均图像和一个 Mask，Mask 需要手动进行形态学调整，再次将所有原始图像配准到这个平均图像上。
 
 对配准结果进行灰度归一化 ```normalisaton2mean.py```，并进行 SSD 分析 ```distance_analysis.py```，以排除有潜在代谢异常的数据。
 
-
-
-根据筛选后的数据构建平均图像作为模板，同时获得标准差图像 ```create_template.py```，Mask保持不变。
+根据筛选后的数据构建平均图像作为模板，同时获得标准差图像 ```create_template.py```，Mask 保持不变。
 
 ### 模板应用
 
@@ -55,10 +53,10 @@ git clone https://github.com/DlutMedimgGroup/Chinese-Brain-PET-Template.git
 
 ## 引用
 
-本文发表在。。。。。。。。，如果我们的项目帮到了你，请引用：
+如果我们的项目帮到了你，请引用：
 
 ```
-cite
+coming...
 ```
 
 ## 使用许可
