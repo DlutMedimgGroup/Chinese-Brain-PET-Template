@@ -1,14 +1,16 @@
 # Chinese Brain PET Template
 
-English | [简体中文](./README.zh_CN.md)
+## 简体中文
 
-This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by [Medical Imaging Research Group](https://biomedimg-dlut-edu.cn/), Dalian University of Technology based on 119 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. The dataset is stored on NITRC ([Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/)) and are free download.
+[English](##English)
 
-[![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB|Python-blue)](https://github.com/DlutMedimgGroup)
+这个仓库提供了中国人种专属的PET脑模板，还包括了模板的构建与使用的程序。本项目由 [大连理工大学医学影像研究组](https://biomedimg-dlut-edu.cn/) 基于 119 例正常中国人 <sup>18</sup>F-FDG PET 脑图像完成，并开源了全部数据以及程序。数据集部分存储在NITRC上，[Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/) , 开放免费下载。
 
-## Install
+[![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB-blue)](https://github.com/DlutMedimgGroup)
 
-The project relies on MATLAB, [SPM](https://www.fil.ion.ucl.ac.uk/spm/), [SnPM](http://www.nisox.org/Software/SnPM13/), [Tools for NIfTI and ANALYZE image](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image), Python3, [ANTsPy](https://github.com/ANTsX/ANTsPy) , and other tools and has been fully tested on the following environments.
+### 安装
+
+本项目使用MATLAB来分析用户输入的图像，并且已经在以下版本上完成测试。
 
 > **Windows 10**
 >
@@ -20,12 +22,54 @@ The project relies on MATLAB, [SPM](https://www.fil.ion.ucl.ac.uk/spm/), [SnPM](
 >
 > - Tools for NIfTI and ANALYZE image v.1.27.0.0 
 >
-> - Python 3.7.3 64-bit
 >
-> **Ubuntu 16.04.6 LTS**
+
+下载项目源码：
+
+```
+git clone https://github.com/DlutMedimgGroup/Chinese-Brain-PET-Template.git
+```
+
+### 使用说明
+
+为了方便用户使用我们提供的模板，我们提供了一个一键脚本用于分析输入的数据。脚本基于 MATLAB 编写，需要首先确保 MATLAB 中已有 SPM ，SnPM，Tools for NIfTI and ANALYZE image。运行时需要修改 [MATLAB](./MATLAB Scripts) 文件夹下的 ```main.m```，设置数据存放路径，即可执行，路径下不应该存放其他 NIFTI 格式的数据。
+
+### 引用
+
+如果我们的项目帮到了你，请引用：
+
+```
+coming...
+```
+
+### 使用许可
+
+本项目使用 MIT 许可协议。
+
+[![](https://img.shields.io/github/license/DlutMedimgGroup/Chinese-Brain-PET-Template)]()
+
+
+## English
+[简体中文](##简体中文)
+
+This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by [Medical Imaging Research Group](https://biomedimg-dlut-edu.cn/), Dalian University of Technology based on 119 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. The dataset is stored on NITRC ([Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/)) and are free for download.
+
+[![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB-blue)](https://github.com/DlutMedimgGroup)
+
+### Install
+
+This project uses MATLAB to analyze the image input by users and has been fully tested on the following environments.
+
+> **Windows 10**
 >
-> - Python 3.8.3 64-bit
-> - ANTsPy v.0.2.6
+> - MATLAB R2018a
+>
+> - SPM 12
+>
+> - SnPM v.13.1.08
+>
+> - Tools for NIfTI and ANALYZE image v.1.27.0.0 
+>
 
 To clone this repo:
 
@@ -33,25 +77,11 @@ To clone this repo:
 git clone https://github.com/DlutMedimgGroup/Chinese-Brain-PET-Template.git
 ```
 
-## Usage
-
-<img src="./Pipeline.jpg" alt="image-20210112144350294" height=600 />
-
-### Building template
-
-Use the ```ants_reg.py``` in the Python Scripts folder to normalize all images, this step needs to be done under Linux or MacOS as the SyN method in ANTsPy is used.
-
-A mean image and a mask image are generated using the SPM Masking toolbox. The mask image needs to be manually morphologically adjusted and all the original images are normalized to this mean image again.
-
-The registration results are intensity normalized by ``normalisaton2mean.py`` and SSD analysis ``distance_analysis.py`` is performed to exclude data with potential metabolic abnormalities.
-
-The mean image is built as a template based on the filtered data, while the standard deviation image is obtained by ``create_template.py``, and mask image can be kept unchanged.
-
-### Applying template to inputted image
+### Usage
 
 A MATLAB script is provided for user-friendly SPM analysis. This script needs MATLAB environment (SPM ，SnPM，Tools for NIfTI and ANALYZE image). When running, you need to modify the ``main.m`` in the MATLAB folder, set the image path, and no other NIFTI format data should be stored under the path.
 
-## Citation
+### Citation
 
 If our work helps, please cite:
 
@@ -59,7 +89,6 @@ If our work helps, please cite:
 coming...
 ```
 
-## License
+### License
 
-[![](https://img.shields.io/badge/license-MIT-green)]()
-
+[![](https://img.shields.io/github/license/DlutMedimgGroup/Chinese-Brain-PET-Template)]()
