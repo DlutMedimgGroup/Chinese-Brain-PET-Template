@@ -63,4 +63,4 @@ coming...
 
 本项目使用 MIT 许可协议。
 
-[![](https://img.shields.io/badge/license-MIT-green)]()
+![](https://img.shields.io/github/license/DlutMedimgGroup/Chinese-Brain-PET-Template)
