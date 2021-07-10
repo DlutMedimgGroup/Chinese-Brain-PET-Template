@@ -4,7 +4,7 @@
 
 [English](##English)
 
-这个仓库提供了中国人种专属的PET脑模板，还包括了模板的构建与使用的程序。本项目由 [大连理工大学医学影像研究组](https://biomedimg-dlut-edu.cn/) 基于 119 例正常中国人 <sup>18</sup>F-FDG PET 脑图像完成，并开源了全部数据以及程序。数据集部分存储在NITRC上，[Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/) , 开放免费下载。
+这个仓库提供了中国人种专属的PET脑模板，还包括了模板的构建与使用的程序。本项目由 [大连理工大学医学影像研究组](https://biomedimg-dlut-edu.cn/) 基于 116 例正常中国人 <sup>18</sup>F-FDG PET 脑图像完成，并开源了全部数据以及程序。数据集部分存储在NITRC上，[Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/) , 开放免费下载。
 
 [![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB-blue)](https://github.com/DlutMedimgGroup)
 
