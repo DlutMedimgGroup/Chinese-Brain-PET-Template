@@ -1,5 +1,49 @@
 # Chinese Brain PET Template
 
+## English
+[简体中文](##简体中文)
+
+This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by [Medical Imaging Research Group](https://biomedimg-dlut-edu.cn/), Dalian University of Technology based on 116 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. The dataset is stored on NITRC ([Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/)) and are free for download.
+
+[![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB-blue)](https://github.com/DlutMedimgGroup)
+
+### Install
+
+This project uses MATLAB to analyze the image input by users and has been fully tested on the following environments.
+
+> **Windows 10**
+>
+> - MATLAB R2018a
+>
+> - SPM 12
+>
+> - SnPM v.13.1.08
+>
+> - Tools for NIfTI and ANALYZE image v.1.27.0.0 
+>
+
+To clone this repo:
+
+```
+git clone https://github.com/DlutMedimgGroup/Chinese-Brain-PET-Template.git
+```
+
+### Usage
+
+A MATLAB script is provided for user-friendly SPM analysis. This script needs MATLAB environment (SPM ，SnPM，Tools for NIfTI and ANALYZE image). When running, you need to modify the ``main.m`` in the MATLAB folder, set the image path, and no other NIFTI format data should be stored under the path.
+
+### Citation
+
+If our work helps, please cite:
+
+```
+coming...
+```
+
+### License
+
+[![](https://img.shields.io/github/license/DlutMedimgGroup/Chinese-Brain-PET-Template)]()
+
 ## 简体中文
 
 [English](##English)
@@ -48,47 +92,3 @@ coming...
 
 [![](https://img.shields.io/github/license/DlutMedimgGroup/Chinese-Brain-PET-Template)]()
 
-
-## English
-[简体中文](##简体中文)
-
-This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by [Medical Imaging Research Group](https://biomedimg-dlut-edu.cn/), Dalian University of Technology based on 116 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. The dataset is stored on NITRC ([Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/)) and are free for download.
-
-[![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB-blue)](https://github.com/DlutMedimgGroup)
-
-### Install
-
-This project uses MATLAB to analyze the image input by users and has been fully tested on the following environments.
-
-> **Windows 10**
->
-> - MATLAB R2018a
->
-> - SPM 12
->
-> - SnPM v.13.1.08
->
-> - Tools for NIfTI and ANALYZE image v.1.27.0.0 
->
-
-To clone this repo:
-
-```
-git clone https://github.com/DlutMedimgGroup/Chinese-Brain-PET-Template.git
-```
-
-### Usage
-
-A MATLAB script is provided for user-friendly SPM analysis. This script needs MATLAB environment (SPM ，SnPM，Tools for NIfTI and ANALYZE image). When running, you need to modify the ``main.m`` in the MATLAB folder, set the image path, and no other NIFTI format data should be stored under the path.
-
-### Citation
-
-If our work helps, please cite:
-
-```
-coming...
-```
-
-### License
-
-[![](https://img.shields.io/github/license/DlutMedimgGroup/Chinese-Brain-PET-Template)]()
