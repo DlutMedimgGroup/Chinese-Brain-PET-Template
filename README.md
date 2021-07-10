@@ -52,7 +52,7 @@ coming...
 ## English
 [简体中文](##简体中文)
 
-This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by [Medical Imaging Research Group](https://biomedimg-dlut-edu.cn/), Dalian University of Technology based on 119 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. The dataset is stored on NITRC ([Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/)) and are free for download.
+This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by [Medical Imaging Research Group](https://biomedimg-dlut-edu.cn/), Dalian University of Technology based on 116 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. The dataset is stored on NITRC ([Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/)) and are free for download.
 
 [![DlutMedimgGroup](https://img.shields.io/badge/GitHub-DlutMedimgGroup-green?logo=github)](https://github.com/DlutMedimgGroup) [![language](https://img.shields.io/badge/language-MATLAB-blue)](https://github.com/DlutMedimgGroup)
 
