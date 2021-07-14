@@ -3,7 +3,7 @@
 % spm SPM - SPM12 (7487)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
-function []=SPMt_Specify(result_path, scan1, scan2)
+function []=SPMt_Specify(result_path, scan1, scan2,mask)
 spm_jobman('initcfg');
 matlabbatch = {};
 matlabbatch{1}.spm.tools.snpm.des.TwoSampT.DesignName = '2 Groups: Two Sample T test; 1 scan per subject';
@@ -20,7 +20,7 @@ matlabbatch{1}.spm.tools.snpm.des.TwoSampT.bVolm = 1;
 matlabbatch{1}.spm.tools.snpm.des.TwoSampT.ST.ST_none = 0;
 matlabbatch{1}.spm.tools.snpm.des.TwoSampT.masking.tm.tm_none = 1;
 matlabbatch{1}.spm.tools.snpm.des.TwoSampT.masking.im = 0;
-matlabbatch{1}.spm.tools.snpm.des.TwoSampT.masking.em = {'D:\test1\mask_cn_cp_spm.nii,1'};
+matlabbatch{1}.spm.tools.snpm.des.TwoSampT.masking.em = {[mask, ',1']};
 matlabbatch{1}.spm.tools.snpm.des.TwoSampT.globalc.g_omit = 1;
 matlabbatch{1}.spm.tools.snpm.des.TwoSampT.globalm.gmsca.gmsca_no = 1;
 matlabbatch{1}.spm.tools.snpm.des.TwoSampT.globalm.glonorm = 1;
