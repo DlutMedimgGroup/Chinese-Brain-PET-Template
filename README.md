@@ -1,7 +1,7 @@
 # Chinese Brain PET Template
 
 ## English
-[简体中文](##简体中文)
+[简体中文](#zh-cn)
 
 This repository provides a PET brain template specific to the Chinese population, and also includes programs for the building and applying of the template. This project was developed by [Medical Imaging Research Group](https://biomedimg-dlut-edu.cn/), Dalian University of Technology based on 116 normal Chinese <sup>18</sup>F-FDG PET brain images, and open source all data and programs. The dataset is stored on NITRC ([Chinese Brain PET Template - NITRC](https://www.nitrc.org/projects/cnpet/)) and are free for download.
 
@@ -44,7 +44,7 @@ coming...
 
 [![](https://img.shields.io/github/license/DlutMedimgGroup/Chinese-Brain-PET-Template)]()
 
-## 简体中文
+<h2 id="zh-cn">简体中文</h2>
 
 [English](##English)
 
