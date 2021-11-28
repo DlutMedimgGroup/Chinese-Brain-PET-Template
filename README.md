@@ -37,9 +37,7 @@ A MATLAB script is provided for user-friendly SPM analysis. This script needs MA
 
 If our work helps, please cite:
 
-```
-coming...
-```
+> WANG H, TIAN Y, LIU Y, et al. Population-specific brain [18F]-FDG PET templates of Chinese subjects for statistical parametric mapping[J]. Scientific Data, 2021, 8(1): 305.
 
 ### License
 
@@ -77,15 +75,13 @@ git clone https://github.com/DlutMedimgGroup/Chinese-Brain-PET-Template.git
 
 ### 使用说明
 
-为了方便用户使用我们提供的模板，我们提供了一个一键脚本用于分析输入的数据。脚本基于 MATLAB 编写，需要首先确保 MATLAB 中已有 SPM ，SnPM，Tools for NIfTI and ANALYZE image。运行时需要修改 [MATLAB](./MATLAB Scripts) 文件夹下的 ```main.m```，设置数据存放路径，即可执行，路径下不应该存放其他 NIFTI 格式的数据。
+为了方便用户使用我们提供的模板，我们提供了一个一键脚本用于分析输入的数据。脚本基于 MATLAB 编写，需要首先确保 MATLAB 中已有 SPM ，SnPM，Tools for NIfTI and ANALYZE image。运行时需要修改 *MATLAB* 文件夹下的 ```main.m```，设置数据存放路径，即可执行，路径下不应该存放其他 NIFTI 格式的数据。
 
 ### 引用
 
 如果我们的项目帮到了你，请引用：
 
-```
-coming...
-```
+> WANG H, TIAN Y, LIU Y, et al. Population-specific brain [18F]-FDG PET templates of Chinese subjects for statistical parametric mapping[J]. Scientific Data, 2021, 8(1): 305.
 
 ### 使用许可
 
